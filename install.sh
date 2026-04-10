@@ -1428,8 +1428,6 @@ process_dokoko() {
         jq --arg fport "$fport" --arg fip "$fip" '
             .inbounds += [
                 {   
-                    "sniff": true,
-                    "sniff_override_destination": true,
                     "type": "direct",
                     "tag": "direct-in",
                     "listen": $fip,
